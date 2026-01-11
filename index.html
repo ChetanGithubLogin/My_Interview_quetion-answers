@@ -1,218 +1,235 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <meta name="description" content="">
-        <meta name="author" content="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="Jglq95JsrI-C4d3QWDHzUqYVVbEZZE5NDlA4q6UE1ns" />
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-        <title>JSNoob</title>
+    <title>JSNoob</title>
 
-        <!-- CSS FILES -->        
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
-                        
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        <link href="css/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap"
+        rel="stylesheet">
 
-        <link href="css/templatemo-topic-listing.css" rel="stylesheet">      
- <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css" rel="stylesheet">
-        <style>
-            .code-editor {
-                background-color: #1e1e1e;
-                border-radius: 8px;
-                border: 1px solid #333;
-                overflow: hidden;
-                margin-top: 20px;
-            }
-            .editor-header {
-                background-color: #252526;
-                padding: 12px 20px;
-                border-bottom: 1px solid #333;
-                display: flex;
-                align-items: center;
-                gap: 10px;
-            }
-            .editor-filename {
-                color: #858585;
-                font-size: 12px;
-                font-family: 'Courier New', monospace;
-            }
-            .editor-dot {
-                width: 8px;
-                height: 8px;
-                background-color: #f44747;
-                border-radius: 50%;
-            }
-            .editor-content {
-                padding: 0;
-                margin: 0;
-                overflow-x: auto;
-            }
-            .hljs {
-                background-color: #1e1e1e !important;
-                padding: 20px;
-                margin: 0;
-            }
-        </style>
-<!--
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="css/templatemo-topic-listing.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css"
+        rel="stylesheet">
+    <style>
+        .code-editor {
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            border: 1px solid #333;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .editor-header {
+            background-color: #252526;
+            padding: 12px 20px;
+            border-bottom: 1px solid #333;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .editor-filename {
+            color: #858585;
+            font-size: 12px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .editor-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #f44747;
+            border-radius: 50%;
+        }
+
+        .editor-content {
+            padding: 0;
+            margin: 0;
+            overflow-x: auto;
+        }
+
+        .hljs {
+            background-color: #1e1e1e !important;
+            padding: 20px;
+            margin: 0;
+        }
+    </style>
+    <!--
 
 TemplateMo 590 topic listing
 
 https://templatemo.com/tm-590-topic-listing
 
 -->
-    </head>
-    
-    <body id="top">
+</head>
 
-        <main>
+<body id="top">
 
-            <nav class="navbar navbar-expand-lg">
-                <div class="container">
-                    <a class="navbar-brand" href="index.html">
-                        <i class="bi-back"></i>
-                        <span>JSNoob</span>
-                    </a>
+    <main>
 
-                    <div class="d-lg-none ms-auto me-4">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <i class="bi-back"></i>
+                    <span>JSNoob</span>
+                </a>
+
+                <div class="d-lg-none ms-auto me-4">
+                    <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-lg-5 me-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_1">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_2">Browse Topics</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_3">How it works</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_4">FAQs</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_5">Contact</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
+
+                            <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                                <li><a class="dropdown-item" href="topics-listing.html">Topics Listing</a></li>
+
+                                <li><a class="dropdown-item" href="contact.html">Contact Form</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <div class="d-none d-lg-block">
                         <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
                     </div>
-    
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-    
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ms-lg-5 me-lg-auto">
-                            <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_1">Home</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_2">Browse Topics</a>
-                            </li>
-    
-                            <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_3">How it works</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_4">FAQs</a>
-                            </li>
-    
-                            <li class="nav-item">
-                                <a class="nav-link click-scroll" href="#section_5">Contact</a>
-                            </li>
-
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
-
-                                <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="topics-listing.html">Topics Listing</a></li>
-
-                                    <li><a class="dropdown-item" href="contact.html">Contact Form</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-
-                        <div class="d-none d-lg-block">
-                            <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
-                        </div>
-                    </div>
                 </div>
-            </nav>
-            
+            </div>
+        </nav>
 
-            <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
-                <div class="container">
-                    <div class="row">
 
-                        <div class="col-lg-8 col-12 mx-auto">
-                            <h1 class="text-white text-center">Discover. Learn. Enjoy</h1>
+        <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
+            <div class="container">
+                <div class="row">
 
-                            <h6 class="text-center">platform for creatives around the world</h6>
+                    <div class="col-lg-8 col-12 mx-auto">
+                        <h1 class="text-white text-center">Discover. Learn. Enjoy</h1>
 
-                            <form method="get" class="custom-form mt-4 pt-2 mb-lg-0 mb-5" role="search">
-                                <div class="input-group input-group-lg">
-                                    <span class="input-group-text bi-search" id="basic-addon1">
-                                        
-                                    </span>
+                        <h6 class="text-center">platform for creatives around the world</h6>
 
-                                    <input name="keyword" type="search" class="form-control" id="keyword" placeholder="Design, Code, Marketing, Finance ..." aria-label="Search">
+                        <form method="get" class="custom-form mt-4 pt-2 mb-lg-0 mb-5" role="search">
+                            <div class="input-group input-group-lg">
+                                <span class="input-group-text bi-search" id="basic-addon1">
 
-                                    <button type="submit" class="form-control">Search</button>
+                                </span>
+
+                                <input name="keyword" type="search" class="form-control" id="keyword"
+                                    placeholder="Design, Code, Marketing, Finance ..." aria-label="Search">
+
+                                <button type="submit" class="form-control">Search</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="featured-section">
+            <div class="container">
+                <div class="row justify-content-center">
+
+                    <div class="col-lg-4 col-12 mb-4 mb-lg-0">
+                        <div class="custom-block bg-white shadow-lg">
+                            <a href="topics-detailJs.html">
+                                <div class="d-flex">
+                                    <div>
+                                        <h5 class="mb-2">JAVASCRIPT</h5>
+
+                                        <p class="mb-0">JavaScript is a high-level, interpreted programming language
+                                            used to make web pages interactive and dynamic. It runs in the browser and
+                                            on servers (Node.js)</p>
+                                    </div>
+
+                                    <!-- <span class="badge bg-design rounded-pill ms-auto">14</span> -->
                                 </div>
-                            </form>
-                        </div>
 
+                                <img src="images/topics/javascript-logo-svgrepo-com.svg"
+                                    class="custom-block-image img-fluid" alt="">
+                            </a>
+                        </div>
                     </div>
-                </div>
-            </section>
+                    <div class="col-lg-4 col-12 mb-4 mb-lg-0">
+                        <div class="custom-block bg-white shadow-lg">
+                            <a href="topics-detailAngular.html">
+                                <div class="d-flex">
+                                    <div>
+                                        <h5 class="mb-2">ANGULAR</h5>
 
-
-            <section class="featured-section">
-                <div class="container">
-                    <div class="row justify-content-center">
-
-                        <div class="col-lg-4 col-12 mb-4 mb-lg-0">
-                            <div class="custom-block bg-white shadow-lg">
-                                <a href="topics-detailJs.html">
-                                    <div class="d-flex">
-                                        <div>
-                                            <h5 class="mb-2">JAVASCRIPT</h5>
-
-                                            <p class="mb-0">JavaScript is a high-level, interpreted programming language used to make web pages interactive and dynamic. It runs in the browser and on servers (Node.js)</p>
-                                        </div>
-
-                                        <!-- <span class="badge bg-design rounded-pill ms-auto">14</span> -->
+                                        <p class="mb-0">Angular is a TypeScript-based front-end framework developed by
+                                            Google for building scalable Single Page Applications (SPAs).</p>
                                     </div>
 
-                                    <img src="images/topics/javascript-logo-svgrepo-com.svg" class="custom-block-image img-fluid" alt="">
-                                </a>
-                            </div>
+                                    <!-- <span class="badge bg-design rounded-pill ms-auto">14</span> -->
+                                </div>
+
+                                <img src="images/topics/angular_icon_gradient.gif" class="custom-block-image img-fluid"
+                                    alt="">
+                            </a>
                         </div>
-                        <div class="col-lg-4 col-12 mb-4 mb-lg-0">
-                            <div class="custom-block bg-white shadow-lg">
-                                <a href="topics-detailAngular.html">
-                                    <div class="d-flex">
-                                        <div>
-                                            <h5 class="mb-2">ANGULAR</h5>
+                    </div>
+                    <div class="col-lg-4 col-12 mb-4 mb-lg-0">
+                        <div class="custom-block bg-white shadow-lg">
+                            <a href="topics-detailReact.html">
+                                <div class="d-flex">
+                                    <div>
+                                        <h5 class="mb-2">REACT</h5>
 
-                                            <p class="mb-0">Angular is a TypeScript-based front-end framework developed by Google for building scalable Single Page Applications (SPAs).</p>
-                                        </div>
-
-                                        <!-- <span class="badge bg-design rounded-pill ms-auto">14</span> -->
+                                        <p class="mb-0">React is a JavaScript library developed by Meta (Facebook) for
+                                            building component-based user interfaces.</p>
                                     </div>
 
-                                    <img src="images/topics/angular_icon_gradient.gif" class="custom-block-image img-fluid" alt="">
-                                </a>
-                            </div>
+                                    <!-- <span class="badge bg-design rounded-pill ms-auto">14</span> -->
+                                </div>
+
+                                <img src="images/topics/React.png" class="custom-block-image img-fluid" alt="">
+                            </a>
                         </div>
-                        <div class="col-lg-4 col-12 mb-4 mb-lg-0">
-                            <div class="custom-block bg-white shadow-lg">
-                                <a href="topics-detailReact.html">
-                                    <div class="d-flex">
-                                        <div>
-                                            <h5 class="mb-2">REACT</h5>
+                    </div>
 
-                                            <p class="mb-0">React is a JavaScript library developed by Meta (Facebook) for building component-based user interfaces.</p>
-                                        </div>
-
-                                        <!-- <span class="badge bg-design rounded-pill ms-auto">14</span> -->
-                                    </div>
-
-                                    <img src="images/topics/React.png" class="custom-block-image img-fluid" alt="">
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- <div class="col-lg-6 col-12">
+                    <!-- <div class="col-lg-6 col-12">
                             <div class="custom-block custom-block-overlay">
                                 <div class="d-flex flex-column h-100">
                                     <img src="images/businesswoman-using-tablet-analysis.jpg" class="custom-block-image img-fluid" alt="">
@@ -254,12 +271,12 @@ https://templatemo.com/tm-590-topic-listing
                             </div>
                         </div> -->
 
-                    </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
 
-            <!-- <section class="explore-section section-padding" id="section_2">
+        <!-- <section class="explore-section section-padding" id="section_2">
                 <div class="container">
                     <div class="row">
 
@@ -584,7 +601,7 @@ https://templatemo.com/tm-590-topic-listing
             </section> -->
 
 
-            <!-- <section class="timeline-section section-padding" id="section_3">
+        <!-- <section class="timeline-section section-padding" id="section_3">
                 <div class="section-overlay"></div>
 
                 <div class="container">
@@ -773,58 +790,58 @@ https://templatemo.com/tm-590-topic-listing
                     </div>
                 </div>
             </section> -->
-        </main>
+    </main>
 
-<footer class="site-footer section-padding">
-            <div class="container">
-                <div class="row">
+    <footer class="site-footer section-padding">
+        <div class="container">
+            <div class="row">
 
-                    <div class="col-lg-3 col-12 mb-4 pb-2">
-                        <a class="navbar-brand mb-2" href="index.html">
-                            <i class="bi-back"></i>
-                            <span>JSNoob</span>
+                <div class="col-lg-3 col-12 mb-4 pb-2">
+                    <a class="navbar-brand mb-2" href="index.html">
+                        <i class="bi-back"></i>
+                        <span>JSNoob</span>
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-6">
+                    <h6 class="site-footer-title mb-3">Resources</h6>
+
+                    <ul class="site-footer-links">
+                        <li class="site-footer-link-item">
+                            <a href="#" class="site-footer-link">Home</a>
+                        </li>
+
+                        <li class="site-footer-link-item">
+                            <a href="#" class="site-footer-link">How it works</a>
+                        </li>
+
+                        <li class="site-footer-link-item">
+                            <a href="#" class="site-footer-link">FAQs</a>
+                        </li>
+
+                        <li class="site-footer-link-item">
+                            <a href="#" class="site-footer-link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-6 mb-4 mb-lg-0">
+                    <h6 class="site-footer-title mb-3">Information</h6>
+
+                    <p class="text-white d-flex mb-1">
+                        <a href="tel: 123-456-7890" class="site-footer-link">
+                            123-456-7890
                         </a>
-                    </div>
+                    </p>
 
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h6 class="site-footer-title mb-3">Resources</h6>
+                    <p class="text-white d-flex">
+                        <a href="mailto:info@company.com" class="site-footer-link">
+                            info@company.com
+                        </a>
+                    </p>
+                </div>
 
-                        <ul class="site-footer-links">
-                            <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">Home</a>
-                            </li>
-
-                            <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">How it works</a>
-                            </li>
-
-                            <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">FAQs</a>
-                            </li>
-
-                            <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-6 mb-4 mb-lg-0">
-                        <h6 class="site-footer-title mb-3">Information</h6>
-
-                        <p class="text-white d-flex mb-1">
-                            <a href="tel: 123-456-7890" class="site-footer-link">
-                               123-456-7890
-                            </a>
-                        </p>
-
-                        <p class="text-white d-flex">
-                            <a href="mailto:info@company.com" class="site-footer-link">
-                                info@company.com
-                            </a>
-                        </p>
-                    </div>
-
-                    <!-- <div class="col-lg-3 col-md-4 col-12 mt-4 mt-lg-0 ms-auto">
+                <!-- <div class="col-lg-3 col-md-4 col-12 mt-4 mt-lg-0 ms-auto">
                         <div class="dropdown">
                             <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             English</button>
@@ -843,25 +860,26 @@ https://templatemo.com/tm-590-topic-listing
                         
                     </div> -->
 
-                </div>
             </div>
-        </footer>
+        </div>
+    </footer>
 
 
-        <!-- JAVASCRIPT FILES -->
-        <script src="js/jquery.min.js"></script>
-        <script src="js/bootstrap.bundle.min.js"></script>
-        <script src="js/jquery.sticky.js"></script>
-        <script src="js/click-scroll.js"></script>
-         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-        <script src="js/custom.js"></script>
-         <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                document.querySelectorAll('code').forEach(block => {
-                    hljs.highlightElement(block);
-                });
+    <!-- JAVASCRIPT FILES -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/click-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('code').forEach(block => {
+                hljs.highlightElement(block);
             });
-        </script>
+        });
+    </script>
 
-    </body>
+</body>
+
 </html>
