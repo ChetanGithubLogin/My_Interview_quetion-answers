@@ -1,264 +1,1233 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <meta name="description" content="">
-        <meta name="author" content="">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <title>JSNoob Detail Page</title>
+    <meta name="description" content="" />
+    <meta name="author" content="" />
 
-        <!-- CSS FILES -->        
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>JSNoob Detail Page</title>
 
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
-                        
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
 
-        <link href="css/bootstrap-icons.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-        <link href="css/templatemo-topic-listing.css" rel="stylesheet">
-<!--
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap"
+        rel="stylesheet" />
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="css/bootstrap-icons.css" rel="stylesheet" />
+
+    <link href="css/templatemo-topic-listing.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css"
+        rel="stylesheet" />
+    <style>
+        .code-editor {
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            border: 1px solid #333;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        .editor-header {
+            background-color: #252526;
+            padding: 12px 20px;
+            border-bottom: 1px solid #333;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .editor-filename {
+            color: #858585;
+            font-size: 12px;
+            font-family: "Courier New", monospace;
+        }
+
+        .editor-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #f44747;
+            border-radius: 50%;
+        }
+
+        .editor-content {
+            padding: 0;
+            margin: 0;
+            overflow-x: auto;
+        }
+
+        .hljs {
+            background-color: #1e1e1e !important;
+            padding: 20px;
+            margin: 0;
+        }
+    </style>
+    <!--
 
 TemplateMo 590 topic listing
 
 https://templatemo.com/tm-590-topic-listing
 
 -->
-    </head>
-    
-    <body id="top">
+</head>
 
-        <main>
+<body id="top">
+    <main>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <i class="bi-back"></i>
+                    <span>JSNoob</span>
+                </a>
 
-            <nav class="navbar navbar-expand-lg">
-                <div class="container">
-                    <a class="navbar-brand" href="index.html">
-                        <i class="bi-back"></i>
-                        <span>JSNoob</span>
-                    </a>
+                <div class="d-lg-none ms-auto me-4">
+                    <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
+                </div>
 
-                    <div class="d-lg-none ms-auto me-4">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-lg-5 me-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="index.html#section_1">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="index.html#section_2">Browse Topics</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="index.html#section_3">How it works</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="index.html#section_4">FAQs</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="index.html#section_5">Contact</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#section_5" id="navbarLightDropdownMenuLink"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
+
+                            <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                                <li>
+                                    <a class="dropdown-item" href="topics-listing.html">Topics Listing</a>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item" href="contact.html">Contact Form</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <div class="d-none d-lg-block">
                         <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
                     </div>
-    
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-    
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ms-lg-5 me-lg-auto">
-                            <li class="nav-item">
-                                <a class="nav-link click-scroll" href="index.html#section_1">Home</a>
-                            </li>
+                </div>
+            </div>
+        </nav>
 
-                            <li class="nav-item">
-                                <a class="nav-link click-scroll" href="index.html#section_2">Browse Topics</a>
-                            </li>
-    
-                            <li class="nav-item">
-                                <a class="nav-link click-scroll" href="index.html#section_3">How it works</a>
-                            </li>
+        <header class="site-header d-flex flex-column justify-content-center align-items-center">
+            <div class="container">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-lg-5 col-12 mb-5">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">
+                                    <a href="index.html">Homepage</a>
+                                </li>
 
-                            <li class="nav-item">
-                                <a class="nav-link click-scroll" href="index.html#section_4">FAQs</a>
-                            </li>
-    
-                            <li class="nav-item">
-                                <a class="nav-link click-scroll" href="index.html#section_5">Contact</a>
-                            </li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    Javascript
+                                </li>
+                            </ol>
+                        </nav>
 
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#section_5" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
+                        <h2 class="text-white">
+                            Introduction to <br />
+                            Javascript
+                        </h2>
 
-                                <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="topics-listing.html">Topics Listing</a></li>
+                        <div class="d-flex align-items-center mt-5">
+                            <a href="#topics-detail" class="btn custom-btn custom-border-btn smoothscroll me-4">Read
+                                More</a>
 
-                                    <li><a class="dropdown-item" href="contact.html">Contact Form</a></li>
-                                </ul>
-                            </li>
-                        </ul>
+                            <!-- <a href="#top" class="custom-icon bi-bookmark smoothscroll"></a> -->
+                        </div>
+                    </div>
 
-                        <div class="d-none d-lg-block">
-                            <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
+                    <div class="col-lg-5 col-12">
+                        <div class="topics-detail-block bg-white shadow-lg">
+                            <img src="images/topics/javascript-logo-svgrepo-com.svg"
+                                class="topics-detail-block-image img-fluid" />
                         </div>
                     </div>
                 </div>
-            </nav>
-            
+            </div>
+        </header>
 
-            <header class="site-header d-flex flex-column justify-content-center align-items-center">
-                <div class="container">
-                    <div class="row justify-content-center align-items-center">
+        <section class="topics-detail-section section-padding" id="topics-detail">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-12 m-auto">
+                        <h3 class="mb-4">Introduction to Javascript</h3>
 
-                        <div class="col-lg-5 col-12 mb-5">
-                            <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="index.html">Homepage</a></li>
+                        <p>
+                            JavaScript is a high-level, interpreted language that adds
+                            interactivity, logic, and dynamic behavior to web pages and
+                            today runs across browsers, servers, mobile apps, and even
+                            desktop software..
+                        </p>
 
-                                    <li class="breadcrumb-item active" aria-current="page">Javascript</li>
-                                </ol>
-                            </nav>
+                        <p><strong>Where is JavaScript Used?</strong></p>
+                        <p>
+                            JavaScript is used in web development to create interactive and
+                            dynamic content on websites. It runs in the browser, enabling
+                            features like form validation, animations, and user
+                            interactions. Additionally, JavaScript can be used on the server
+                            side with Node.js, in mobile applications (React Native),
+                            desktop applications (Electron), and even in game development.
+                        </p>
 
-                            <h2 class="text-white">Introduction to <br> Web Design 101</h2>
-
-                            <div class="d-flex align-items-center mt-5">
-                                <a href="#topics-detail" class="btn custom-btn custom-border-btn smoothscroll me-4">Read More</a>
-
-                                <!-- <a href="#top" class="custom-icon bi-bookmark smoothscroll"></a> -->
-                            </div>
-                        </div>
-
-                        <div class="col-lg-5 col-12">
-                            <div class="topics-detail-block bg-white shadow-lg">
-                                <img src="images/topics/javascript-logo-svgrepo-com.svg" class="topics-detail-block-image img-fluid">
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </header>
-
-
-            <section class="topics-detail-section section-padding" id="topics-detail">
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-8 col-12 m-auto">
-                            <h3 class="mb-4">Introduction to Javascript</h3>
-
-                            <p>JavaScript is a high-level, interpreted language that adds interactivity, logic, and dynamic behavior to web pages and today runs across browsers, servers, mobile apps, and even desktop software..</p>
-
-                            <p><strong>Where is JavaScript Used?</strong></p>
-                            <p>JavaScript is used in web development to create interactive and dynamic content on websites. It runs in the browser, enabling features like form validation, animations, and user interactions. Additionally, JavaScript can be used on the server side with Node.js, in mobile applications (React Native), desktop applications (Electron), and even in game development.</p>
-
-                            <!-- <blockquote>
+                        <!-- <blockquote>
                                 Freelancing your skills isn’t going to make you a millionaire overnight.
                             </blockquote> -->
 
-                            <div class="row my-4">
-                                <div class="col-lg-6 col-md-6 col-12">
-                                    <img src="images/businesswoman-using-tablet-analysis.jpg" class="topics-detail-block-image img-fluid">
-                                </div>
-
-                                <div class="col-lg-6 col-md-6 col-12 mt-4 mt-lg-0 mt-md-0">
-                                    <img src="images/colleagues-working-cozy-office-medium-shot.jpg" class="topics-detail-block-image img-fluid">
-                                </div>
+                        <div class="row my-4">
+                            <div class="col-lg-6 col-md-6 col-12">
+                                <img src="images/businesswoman-using-tablet-analysis.jpg"
+                                    class="topics-detail-block-image img-fluid" />
                             </div>
 
-                            <!-- <p>Most people start with freelancing skills they already have as a side hustle to build up income. This extra cash can be used for a vacation, to boost up savings, investing, build business.</p> -->
+                            <div class="col-lg-6 col-md-6 col-12 mt-4 mt-lg-0 mt-md-0">
+                                <img src="images/colleagues-working-cozy-office-medium-shot.jpg"
+                                    class="topics-detail-block-image img-fluid" />
+                            </div>
                         </div>
 
+                        <!-- <p>Most people start with freelancing skills they already have as a side hustle to build up income. This extra cash can be used for a vacation, to boost up savings, investing, build business.</p> -->
                     </div>
                 </div>
-            </section>
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <header class="mb-4">
+                            <h4 class="mb-2">1. Check Prime</h4>
+                            <p class="text-muted">
+                                A prime number is only divisible by itself and 1. So, i will
+                                run a while loop and increase by 1. (look at the code example.
+                                If you dont get it. this is not your cake. do learn javaScript
+                                basics and come back.)
+                            </p>
+                        </header>
+                        <div class="code-editor">
+                            <div class="editor-header">
+                                <span class="editor-filename">Prime.js</span>
+                                <div class="editor-dot"></div>
+                            </div>
+                            <pre class="editor-content">
+<code class="language-javascript">
 
+function isPrime(n){
+   var divisor = 2;
 
-            <section class="section-padding section-bg">
-                <div class="container">
-                    <div class="row justify-content-center">
+    while (n > divisor){
+        if(n % divisor == 0){
+            return false;
+        }
+        else
+            divisor++;
+        }
 
-                        <div class="col-lg-5 col-12">
-                            <img src="images/rear-view-young-college-student.jpg" class="newsletter-image img-fluid" alt="">
+    return true;
+}
+
+> isPrime(137);
+= true
+> isPrime(237);
+= false
+</code>
+                  </pre>
                         </div>
-
-                        <div class="col-lg-5 col-12 subscribe-form-wrap d-flex justify-content-center align-items-center">
-                            <form class="custom-form subscribe-form" action="#" method="post" role="form">
-                                <h4 class="mb-4 pb-2">Get Newsletter</h4>
-
-                                <input type="email" name="subscribe-email" id="subscribe-email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Email Address" required="">
-
-                                <div class="col-lg-12 col-12">
-                                    <button type="submit" class="form-control">Subscribe</button>
-                                </div>
-                            </form>
-                        </div>
-
                     </div>
                 </div>
-            </section>
-        </main>
-		
-        <footer class="site-footer section-padding">
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <header class="mb-4">
+                            <h4 class="mb-2">2. Prime Factors</h4>
+                            <p class="text-muted">
+                                Run a while loop. start dividing by two and if not divisible increase divider until u r
+                                done.
+                            </p>
+                        </header>
+                        <div class="code-editor">
+                            <div class="editor-header">
+                                <span class="editor-filename">Prime Factors.js</span>
+                                <div class="editor-dot"></div>
+                            </div>
+                            <pre class="editor-content">
+<code class="language-javascript">
+
+function primeFactors(n){
+  var factors = [], 
+      divisor = 2;
+  
+  while(n>2){
+    if(n % divisor == 0){
+       factors.push(divisor); 
+       n= n/ divisor;
+    }
+    else{
+      divisor++;
+    }     
+  }
+  return factors;
+}
+
+> primeFactors(69);
+  = [3, 23]
+</code>
+                  </pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <header class="mb-4">
+                            <h4 class="mb-2">3. Fibonacci</h4>
+                            <p class="text-muted">
+                                Fibonacci series is one of the most popular interview question for beginners. so, you
+                                have to learn this one.
+                            </p>
+                        </header>
+                        <div class="code-editor">
+                            <div class="editor-header">
+                                <span class="editor-filename">Fibonacci.js</span>
+                                <div class="editor-dot"></div>
+                            </div>
+
+                            <pre class="editor-content">
+<code class="language-javascript">
+// Solution 1: Using iteration    
+function fibonacci(n){
+  var fibo = [0, 1];
+  
+  if (n <= 2) return 1;
+
+  for (var i = 2; i <=n; i++ ){
+   fibo[i] = fibo[i-1]+fibo[i-2];
+  }
+
+ return fibo[n];
+} 
+
+> fibonacci(12);
+  = 144    
+
+  // Solution 2: Using recursion
+  function fibonacci(n){
+  if(n<=1)
+    return n;
+  else
+    return fibonacci(n-1) + fibonacci (n-2);  
+}
+
+> fibonacci(12);
+  = 144  
+</code>
+                  </pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <header class="mb-4">
+                            <h4 class="mb-2">4. Greatest Common Divisor</h4>
+                            <p class="text-muted">
+
+                            </p>
+                        </header>
+                        <div class="code-editor">
+                            <div class="editor-header">
+                                <span class="editor-filename">GCD.js</span>
+                                <div class="editor-dot"></div>
+                            </div>
+                            <pre class="editor-content">
+<code class="language-javascript">
+
+function greatestCommonDivisor(a, b){
+  var divisor = 2, 
+      greatestDivisor = 1;
+
+  //if u pass a -ve number this will not work. fix it dude!!
+  if (a < 2 || b < 2)
+     return 1;
+  
+  while(a >= divisor && b >= divisor){
+   if(a %divisor == 0 && b% divisor ==0){
+      greatestDivisor = divisor;      
+    }
+   divisor++;
+  }
+  return greatestDivisor;
+}
+
+> greatestCommonDivisor(14, 21);
+  =7 
+> greatestCommonDivisor(69, 169);
+  = 1
+</code>
+                  </pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <header class="mb-4">
+                            <h4 class="mb-2">5. Remove Duplicate</h4>
+                            <p class="text-muted">
+
+                            </p>
+                        </header>
+                        <div class="code-editor">
+                            <div class="editor-header">
+                                <span class="editor-filename">RemoveDuplicate.js</span>
+                                <div class="editor-dot"></div>
+                            </div>
+                            <pre class="editor-content">
+<code class="language-javascript">
+
+function removeDuplicate(arr){
+  var exists ={},
+      outArr = [], 
+      elm;
+
+  for(var i =0; i < arr.length; i++){
+    elm = arr[i];
+    if(!exists[elm]){
+      outArr.push(elm);
+      exists[elm] = true;
+   }
+  }
+  return outArr;
+}
+
+> removeDuplicate([1, 2, 2, 3, 4, 4, 5]);
+  = [1, 2, 3, 4, 5]
+</code>
+                  </pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <header class="mb-4">
+                            <h4 class="mb-2">6. Merge two sorted array</h4>
+                            <p class="text-muted">
+
+                            </p>
+                        </header>
+                        <div class="code-editor">
+                            <div class="editor-header">
+                                <span class="editor-filename">mergeSortedArray.js</span>
+                                <div class="editor-dot"></div>
+                            </div>
+                            <pre class="editor-content">
+<code class="language-javascript">
+
+function mergeSortedArray(a, b){
+  var merged = [], 
+      aElm = a[0],
+      bElm = b[0],
+      i = 1,
+      j = 1;
+  
+  if(a.length ==0)
+    return b;
+  if(b.length ==0)
+    return a;
+  /* 
+  if aElm or bElm exists we will insert to merged array
+  (will go inside while loop)
+   to insert: aElm exists and bElm doesn't exists
+             or both exists and aElm < bElm
+    this is the critical part of the example            
+  */
+  while(aElm || bElm){
+   if((aElm && !bElm) || aElm < bElm){
+     merged.push(aElm);
+     aElm = a[i++];
+   }   
+   else {
+     merged.push(bElm);
+     bElm = b[j++];
+   }
+  }
+  return merged;
+}
+
+> mergeSortedArray([2,5,6,9], [1,2,3,29]);
+ = [1, 2, 2, 3, 5, 6, 9, 29]
+</code>
+                  </pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <header class="mb-4">
+                            <h4 class="mb-2">7. swap number without temp</h4>
+                            <p class="text-muted">
+                                How would you swap two numbers without using a temporary variable?
+                            </p>
+                        </header>
+                        <div class="code-editor">
+                            <div class="editor-header">
+                                <span class="editor-filename">Swap2Nums.js</span>
+                                <div class="editor-dot"></div>
+                            </div>
+                            <pre class="editor-content">
+<code class="language-javascript">
+// Solution 1: Using Arithmetic Operations
+function swapNumb(a, b){
+  console.log('before swap: ','a: ', a, 'b: ', b);
+  b = b -a;
+  a = a+ b;
+  b = a-b;
+  console.log('after swap: ','a: ', a, 'b: ', b);  
+}
+
+> swapNumb(2, 3);
+   = before swap:  a:  2 b:  3
+   = after swap:  a:  3 b:  2 
+
+
+// Solution 2: Using Bitwise XOR Operator
+function swapNumb(a, b){
+  console.log("a: " + a + " and b: " + b);
+  a = a ^ b;
+  b = a ^ b;
+  a = a ^ b;
+  console.log("a: " + a + " and b: " + b);
+}
+
+> swapNumb(2, 3);
+  = a: 2 and b: 3
+  = a: 3 and b: 2
+</code>
+                  </pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <header class="mb-4">
+                            <h4 class="mb-2">8. String reverse</h4>
+                            <p class="text-muted">
+                                How would you swap two numbers without using a temporary variable?
+                            </p>
+                        </header>
+                        <div class="code-editor">
+                            <div class="editor-header">
+                                <span class="editor-filename">Swap2Nums.js</span>
+                                <div class="editor-dot"></div>
+                            </div>
+                            <pre class="editor-content">
+<code class="language-javascript">
+// Solution 1: Using loop
+function reverse(str){
+  var rtnStr = '';
+  for(var i = str.length-1; i>=0;i--){
+    rtnStr +=str[i];
+  }
+  return rtnStr;
+}
+
+> reverse('you are a nice dude');
+  = "edud ecin a era uoy"
+
+
+// Solution 2: Using loop with array
+function reverse(str){
+  var rtnStr = [];
+  if(!str || typeof str != 'string' || str.length < 2 ) return str;
+  
+  for(var i = str.length-1; i>=0;i--){
+    rtnStr.push(str[i]);
+  }
+  return rtnStr.join('');
+}
+
+// Solution 3: Using two pointer swap
+function reverse(str) {
+  str = str.split('');
+  var len = str.length,
+      halfIndex = Math.floor(len / 2) - 1,
+      revStr;
+  for (var i = 0; i <= halfIndex; i++) {
+    revStr = str[len - i - 1];
+    str[len - i - 1] = str[i];
+    str[i] = revStr;
+  }
+  return str.join('');
+}
+
+// Solution 4: Using recursion
+function reverse (str) {
+    if (str === "") {
+        return "";
+    } else {
+        return reverse(str.substr(1)) + str.charAt(0);
+    }
+}
+  
+// Solution 5: Using built-in functions
+function reverse(str){
+  if(!str || str.length < 2) return str;  
+  return str.split('').reverse().join('');
+}
+
+// Solution 6: Using ES6 spread operator
+const reverse = str => [...str].reverse().join('');
+
+// Solution 7: Using ES6 reduce function
+const reverse = str => str.split('').reduce((rev, char) => char + rev, '');
+
+
+// Solution 8: Using ES6 recursion with destructuring
+const reverse = ([first, ...rest]) =>
+  first === undefined ? '' : reverse(rest) + first;     
+
+// Solution 9: With Extension of String Prototype
+
+String.prototype.reverse = function (){
+  if(!this || this.length < 2) return this;
+  
+  return this.split('').reverse().join('');
+}
+
+> 'abc'.reverse();
+  = 'cba'
+</code>
+                  </pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <header class="mb-4">
+                            <h4 class="mb-2">9. Reverse in place</h4>
+                            <p class="text-muted">
+                            </p>
+                        </header>
+
+                        <div class="code-editor">
+                            <div class="editor-header">
+                                <span class="editor-filename">reverseInPlace.js</span>
+                                <div class="editor-dot"></div>
+                            </div>
+
+                            <pre class="editor-content">
+<code class="language-javascript">
+
+
+function reverseInPlace(str){
+  return str.split(' ').reverse().join(' ').split('').reverse().join('');
+}
+
+> reverseInPlace('I am the good boy');
+ = "I ma eht doog yob"  
+</code>
+                  </pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <header class="mb-4">
+                            <h4 class="mb-2">10. First non repeating char</h4>
+                            <p class="text-muted">
+                            </p>
+                        </header>
+
+                        <div class="code-editor">
+                            <div class="editor-header">
+                                <span class="editor-filename">firstNonRepeatChar.js</span>
+                                <div class="editor-dot"></div>
+                            </div>
+
+                            <pre class="editor-content">
+<code class="language-javascript">
+
+
+function firstNonRepeatChar(str){
+  var len = str.length,
+      char, 
+      charCount = {};
+  for(var i =0; i< len; i++){
+    char = str[i];
+    if(charCount[char]){
+      charCount[char]++;
+    }
+    else
+      charCount[char] = 1;
+  }
+  for (var j in charCount){
+    if (charCount[j]==1)
+       return j;
+  }
+}  
+
+>firstNonRepeatChar('the quick brown fox jumps then quickly blow air');
+ = "f" 
+</code>
+                  </pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <header class="mb-4">
+                            <h4 class="mb-2">11. remove duplicate char</h4>
+                            <p class="text-muted">
+                            </p>
+                        </header>
+
+                        <div class="code-editor">
+                            <div class="editor-header">
+                                <span class="editor-filename">removeDuplicateChar.js</span>
+                                <div class="editor-dot"></div>
+                            </div>
+
+                            <pre class="editor-content">
+<code class="language-javascript">
+function removeDuplicateChar(str){
+  var len = str.length,
+      char, 
+      charCount = {}, 
+      newStr = [];
+  for(var i =0; i< len; i++){
+    char = str[i];
+    if(charCount[char]){
+      charCount[char]++;
+    }
+    else
+      charCount[char] = 1;
+  }
+  for (var j in charCount){
+    if (charCount[j]==1)
+       newStr.push(j);
+  }
+  return newStr.join('');
+}
+
+> removeDuplicateChar('Learn more javascript dude');
+  = "Lnmojvsciptu"
+</code>
+                  </pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <header class="mb-4">
+                            <h4 class="mb-2">12.check palindrome</h4>
+                            <p class="text-muted">
+                            </p>
+                        </header>
+
+                        <div class="code-editor">
+                            <div class="editor-header">
+                                <span class="editor-filename">isPalindrome.js</span>
+                                <div class="editor-dot"></div>
+                            </div>
+
+                            <pre class="editor-content">
+<code class="language-javascript">
+
+// Solution 1: Using loop
+function isPalindrome(str){
+  var i, len = str.length;
+  for(i =0; i< len/2; i++){
+    if (str[i]!== str[len -1 -i])
+       return false;
+  }
+  return true;
+}
+
+
+// Solution 2: Using built-in functions
+function isPalindrome(str){
+  var revStr = str.split('').reverse().join('');
+  return str === revStr;
+}
+
+> isPalindrome('madam')
+  = true
+> isPalindrome('toyota')
+  = false
+</code>
+                  </pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <header class="mb-4">
+                            <h4 class="mb-2">13.random between 5 to 7</h4>
+                            <p class="text-muted">
+                            </p>
+                        </header>
+
+                        <div class="code-editor">
+                            <div class="editor-header">
+                                <span class="editor-filename">random.js</span>
+                                <div class="editor-dot"></div>
+                            </div>
+
+                            <pre class="editor-content">
+<code class="language-javascript">
+function rand5(){
+   return 1 + Math.random() * 4;
+}
+
+function rand7(){
+  return 5 + rand5() / 5 * 2;
+}
+</code>
+                  </pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <header class="mb-4">
+                            <h4 class="mb-2">14. missing number</h4>
+                            <p class="text-muted">
+                            </p>
+                        </header>
+
+                        <div class="code-editor">
+                            <div class="editor-header">
+                                <span class="editor-filename">missingNumber.js</span>
+                                <div class="editor-dot"></div>
+                            </div>
+
+                            <pre class="editor-content">
+<code class="language-javascript">
+
+
+function missingNumber(arr){
+  var n = arr.length+1, 
+  sum = 0,
+  expectedSum = n* (n+1)/2;
+  
+  for(var i = 0, len = arr.length; i < len; i++){
+    sum += arr[i];
+  }
+  
+  return expectedSum - sum;
+}
+
+> missingNumber([5, 2, 6, 1, 3]);
+  = 4
+</code>
+                  </pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <header class="mb-4">
+                            <h4 class="mb-2">15. Sum of two</h4>
+                            <p class="text-muted">
+                            </p>
+                        </header>
+
+                        <div class="code-editor">
+                            <div class="editor-header">
+                                <span class="editor-filename">missingNumber.js</span>
+                                <div class="editor-dot"></div>
+                            </div>
+
+                            <pre class="editor-content">
+<code class="language-javascript">
+// Solution 1: Brute Force
+function sumFinder(arr, sum){
+  var len = arr.length;
+  
+  for(var i =0; i< len-1; i++){  
+     for(var j = i+1;j< len; j++){
+        if (arr[i] + arr[j] == sum)
+            return true;
+     }
+  }
+  
+  return false;
+}
+
+
+// Solution 2: Using Hash Table
+function sumFinder(arr, sum){
+  var len = arr.length,
+      seen = {},
+      complement;
+  
+  for(var i =0; i< len; i++){
+    complement = sum - arr[i];
+    if(seen[complement]){
+      return true;
+    }
+    seen[arr[i]] = true;
+  }
+  
+  return false;
+}
+
+> sumFinder([6,4,3,2,1,7], 9);
+  = true
+> sumFinder([6,4,3,2,1,7], 2);
+  = false
+
+</code>
+                  </pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <header class="mb-4">
+                            <h4 class="mb-2">16. Largest Sum</h4>
+                            <p class="text-muted">
+                            </p>
+                        </header>
+
+                        <div class="code-editor">
+                            <div class="editor-header">
+                                <span class="editor-filename">missingNumber.js</span>
+                                <div class="editor-dot"></div>
+                            </div>
+
+                            <pre class="editor-content">
+<code class="language-javascript">
+
+
+// Solution 1: Brute Force
+function sumFinder(arr, sum){
+  var len = arr.length;
+  
+  for(var i =0; i< len-1; i++){  
+     for(var j = i+1;j< len; j++){
+        if (arr[i] + arr[j] == sum)
+            return true;
+     }
+  }
+  
+  return false;
+}
+
+
+// Solution 2: Using Hash Table
+function sumFinder(arr, sum){
+  var len = arr.length,
+      seen = {},
+      complement;
+  
+  for(var i =0; i< len; i++){
+    complement = sum - arr[i];
+    if(seen[complement]){
+      return true;
+    }
+    seen[arr[i]] = true;
+  }
+  
+  return false;
+}
+
+> sumFinder([6,4,3,2,1,7], 9);
+  = true
+> sumFinder([6,4,3,2,1,7], 2);
+  = false
+
+</code>
+                  </pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <header class="mb-4">
+                            <h4 class="mb-2">17. Counting Zeros</h4>
+                            <p class="text-muted">
+                            </p>
+                        </header>
+
+                        <div class="code-editor">
+                            <div class="editor-header">
+                                <span class="editor-filename">countZero.js</span>
+                                <div class="editor-dot"></div>
+                            </div>
+
+                            <pre class="editor-content">
+<code class="language-javascript">
+function countZero(n){
+  var count = 0;
+  while(n>0){
+   count += Math.floor(n/10);
+   n = n/10;
+  }
+  return count;
+}
+
+> countZero(2014);
+  = 223
+
+> countZero(100);
+  = 11
+
+</code>
+                  </pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <header class="mb-4">
+                            <h4 class="mb-2">18. subString</h4>
+                            <p class="text-muted">
+                            </p>
+                        </header>
+
+                        <div class="code-editor">
+                            <div class="editor-header">
+                                <span class="editor-filename">subStringFinder.js</span>
+                                <div class="editor-dot"></div>
+                            </div>
+
+                            <pre class="editor-content">
+<code class="language-javascript">
+function subStringFinder(str, subStr){
+  var idx = 0,
+      i = 0,
+      j = 0,
+      len = str.length,
+      subLen = subStr.length;
+
+   for(; i< len; i++){
+   
+      if(str[i] == subStr[j])
+         j++;
+      else
+         j = 0;
+      
+      //check starting point or a match   
+      if(j == 0)
+        idx = i;
+      else if (j == subLen)
+        return idx;
+  }
+
+  return -1;
+}
+
+> subStringFinder('abbcdabbbbbck', 'ab')
+  = 0
+> subStringFinder('abbcdabbbbbck', 'bck')
+  = 9
+
+//doesn't work for this one.
+> subStringFinder('abbcdabbbbbck', 'bbbck')  
+  = -1
+
+</code>
+                  </pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <header class="mb-4">
+                            <h4 class="mb-2">19. Permutations</h4>
+                            <p class="text-muted">
+                            </p>
+                        </header>
+
+                        <div class="code-editor">
+                            <div class="editor-header">
+                                <span class="editor-filename">permutations.js</span>
+                                <div class="editor-dot"></div>
+                            </div>
+
+                            <pre class="editor-content">
+<code class="language-javascript">
+function permutations(str){
+var arr = str.split(''),
+    len = arr.length, 
+    perms = [],
+    rest,
+    picked,
+    restPerms,
+    next;
+
+    if (len == 0)
+        return [str];
+
+    for (var i=0; i< len; i++)
+    {
+        rest = Object.create(arr);
+        picked = rest.splice(i, 1);
+
+        restPerms = permutations(rest.join(''));
+
+       for (var j=0, jLen = restPerms.length; j< jLen; j++)
+       {
+           next = picked.concat(restPerms[j]);
+           perms.push(next.join(''));
+       }
+    }
+   return perms;
+}
+
+</code>
+                  </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding section-bg">
             <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-3 col-12 mb-4 pb-2">
-                        <a class="navbar-brand mb-2" href="index.html">
-                            <i class="bi-back"></i>
-                            <span>JSNoob</span>
-                        </a>
+                <div class="row justify-content-center">
+                    <div class="col-lg-5 col-12">
+                        <img src="images/rear-view-young-college-student.jpg" class="newsletter-image img-fluid"
+                            alt="" />
                     </div>
 
-                    <div class="col-lg-3 col-md-4 col-6">
-                        <h6 class="site-footer-title mb-3">Resources</h6>
+                    <div class="col-lg-5 col-12 subscribe-form-wrap d-flex justify-content-center align-items-center">
+                        <form class="custom-form subscribe-form" action="#" method="post" role="form">
+                            <h4 class="mb-4 pb-2">Get Newsletter</h4>
 
-                        <ul class="site-footer-links">
-                            <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">Home</a>
+                            <input type="email" name="subscribe-email" id="subscribe-email" pattern="[^ @]*@[^ @]*"
+                                class="form-control" placeholder="Email Address" required="" />
+
+                            <div class="col-lg-12 col-12">
+                                <button type="submit" class="form-control">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-12 mb-4 pb-2">
+                    <a class="navbar-brand mb-2" href="index.html">
+                        <i class="bi-back"></i>
+                        <span>JSNoob</span>
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-6">
+                    <h6 class="site-footer-title mb-3">Resources</h6>
+
+                    <ul class="site-footer-links">
+                        <li class="site-footer-link-item">
+                            <a href="#" class="site-footer-link">Home</a>
+                        </li>
+
+                        <li class="site-footer-link-item">
+                            <a href="#" class="site-footer-link">How it works</a>
+                        </li>
+
+                        <li class="site-footer-link-item">
+                            <a href="#" class="site-footer-link">FAQs</a>
+                        </li>
+
+                        <li class="site-footer-link-item">
+                            <a href="#" class="site-footer-link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-6 mb-4 mb-lg-0">
+                    <h6 class="site-footer-title mb-3">Information</h6>
+
+                    <p class="text-white d-flex mb-1">
+                        <a href="tel: 305-240-9671" class="site-footer-link">
+                            305-240-9671
+                        </a>
+                    </p>
+
+                    <p class="text-white d-flex">
+                        <a href="mailto:info@company.com" class="site-footer-link">
+                            info@company.com
+                        </a>
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-12 mt-4 mt-lg-0 ms-auto">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            English
+                        </button>
+
+                        <ul class="dropdown-menu">
+                            <li>
+                                <button class="dropdown-item" type="button">Thai</button>
                             </li>
 
-                            <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">How it works</a>
+                            <li>
+                                <button class="dropdown-item" type="button">Myanmar</button>
                             </li>
 
-                            <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">FAQs</a>
-                            </li>
-
-                            <li class="site-footer-link-item">
-                                <a href="#" class="site-footer-link">Contact</a>
+                            <li>
+                                <button class="dropdown-item" type="button">Arabic</button>
                             </li>
                         </ul>
                     </div>
 
-                    <div class="col-lg-3 col-md-4 col-6 mb-4 mb-lg-0">
-                        <h6 class="site-footer-title mb-3">Information</h6>
-
-                        <p class="text-white d-flex mb-1">
-                            <a href="tel: 305-240-9671" class="site-footer-link">
-                                305-240-9671
-                            </a>
-                        </p>
-
-                        <p class="text-white d-flex">
-                            <a href="mailto:info@company.com" class="site-footer-link">
-                                info@company.com
-                            </a>
-                        </p>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-12 mt-4 mt-lg-0 ms-auto">
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            English</button>
-
-                            <ul class="dropdown-menu">
-                                <li><button class="dropdown-item" type="button">Thai</button></li>
-
-                                <li><button class="dropdown-item" type="button">Myanmar</button></li>
-
-                                <li><button class="dropdown-item" type="button">Arabic</button></li>
-                            </ul>
-                        </div>
-
-                        <p class="copyright-text mt-lg-5 mt-4">Copyright © 2048 JSNoob Listing Center. All rights reserved.
-                        <br><br>Design: <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a></p>
-                        
-                    </div>
-
+                    <p class="copyright-text mt-lg-5 mt-4">
+                        Copyright © <span id="year"></span> JSNoob . All rights reserved.
+                        <br /><br />Design:
+                        <!-- <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a> -->
+                    </p>
                 </div>
             </div>
-        </footer>
+        </div>
+    </footer>
 
-        <!-- JAVASCRIPT FILES -->
-        <script src="js/jquery.min.js"></script>
-        <script src="js/bootstrap.bundle.min.js"></script>
-        <script src="js/jquery.sticky.js"></script>
-        <script src="js/custom.js"></script>
+    <!-- JAVASCRIPT FILES -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Set dynamic year
+            document.getElementById("year").textContent = new Date().getFullYear();
+            document.querySelectorAll("code").forEach((block) => {
+                hljs.highlightElement(block);
+            });
+        });
+    </script>
+</body>
 
-    </body>
 </html>

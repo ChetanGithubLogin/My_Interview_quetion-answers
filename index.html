@@ -21,6 +21,45 @@
         <link href="css/bootstrap-icons.css" rel="stylesheet">
 
         <link href="css/templatemo-topic-listing.css" rel="stylesheet">      
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css" rel="stylesheet">
+        <style>
+            .code-editor {
+                background-color: #1e1e1e;
+                border-radius: 8px;
+                border: 1px solid #333;
+                overflow: hidden;
+                margin-top: 20px;
+            }
+            .editor-header {
+                background-color: #252526;
+                padding: 12px 20px;
+                border-bottom: 1px solid #333;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            .editor-filename {
+                color: #858585;
+                font-size: 12px;
+                font-family: 'Courier New', monospace;
+            }
+            .editor-dot {
+                width: 8px;
+                height: 8px;
+                background-color: #f44747;
+                border-radius: 50%;
+            }
+            .editor-content {
+                padding: 0;
+                margin: 0;
+                overflow-x: auto;
+            }
+            .hljs {
+                background-color: #1e1e1e !important;
+                padding: 20px;
+                margin: 0;
+            }
+        </style>
 <!--
 
 TemplateMo 590 topic listing
@@ -814,7 +853,15 @@ https://templatemo.com/tm-590-topic-listing
         <script src="js/bootstrap.bundle.min.js"></script>
         <script src="js/jquery.sticky.js"></script>
         <script src="js/click-scroll.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
         <script src="js/custom.js"></script>
+         <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelectorAll('code').forEach(block => {
+                    hljs.highlightElement(block);
+                });
+            });
+        </script>
 
     </body>
 </html>
